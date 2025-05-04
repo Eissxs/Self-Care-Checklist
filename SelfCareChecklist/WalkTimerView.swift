@@ -10,7 +10,7 @@ import AVFoundation
 import UserNotifications
 
 struct WalkTimerView: View {
-    let totalSeconds = 1 * 60
+    let totalSeconds = 20 * 60
     @AppStorage("walkStartTime") private var walkStartTime: Double = 0
 
     @State private var secondsLeft: Int = 0
