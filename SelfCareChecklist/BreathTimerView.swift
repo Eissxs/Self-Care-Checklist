@@ -66,7 +66,7 @@ struct BreathTimerView: View {
                         .fontWeight(.semibold)
 
                     Button(action: {
-                        startTimer(minutes: 1)
+                        startTimer(minutes: 5)
                     }) {
                         Text("5 Minutes")
                             .font(.title2)
