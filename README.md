@@ -1,4 +1,4 @@
-# 🌿 Self-Care Checklist (Prototype)
+# 🌿 Self-Care Checklist v1.0 (Prototype) for ITEL315 - Elective iOS Development
 
 **Self-Care Checklist** is a simple iOS prototype app built in SwiftUI to encourage consistent wellness habits like walking, drinking water, and practicing mindfulness. It uses daily checklists, streak tracking, local notifications, and timers to help users build self-care routines in a gentle, focused way.
 
@@ -32,7 +32,16 @@
 
 ## 📸 Screenshots
 
-> *(Add screenshots of the checklist view, streak chart, timer screens, etc.)*
+![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 06 35](https://github.com/user-attachments/assets/cbf7b521-8f87-4585-89db-e0b26d88d9bb)
+
+![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 05 53](https://github.com/user-attachments/assets/bd81cdc8-408a-45a7-96ce-82d32e2945fb)
+
+![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 34 00](https://github.com/user-attachments/assets/3f60296a-1ef4-459e-8836-f4c3d2c8ed16)
+
+
+![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 33 03](https://github.com/user-attachments/assets/d6d5ad95-7842-4c2c-90d7-f9355b89af7f)
+
+![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 33 42](https://github.com/user-attachments/assets/e473886c-cb20-4de2-8f4c-951df059ed7d)
 
 ---
 
