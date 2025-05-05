@@ -32,16 +32,19 @@
 
 ## 📸 Screenshots
 
-![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 06 35](https://github.com/user-attachments/assets/cbf7b521-8f87-4585-89db-e0b26d88d9bb)
-
-![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 05 53](https://github.com/user-attachments/assets/bd81cdc8-408a-45a7-96ce-82d32e2945fb)
-
-![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 34 00](https://github.com/user-attachments/assets/3f60296a-1ef4-459e-8836-f4c3d2c8ed16)
-
-
-![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 33 03](https://github.com/user-attachments/assets/d6d5ad95-7842-4c2c-90d7-f9355b89af7f)
-
-![Simulator Screenshot - iPhone 16e - 2025-05-04 at 15 33 42](https://github.com/user-attachments/assets/e473886c-cb20-4de2-8f4c-951df059ed7d)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/cbf7b521-8f87-4585-89db-e0b26d88d9bb" width="45%" />
+  <img src="https://github.com/user-attachments/assets/bd81cdc8-408a-45a7-96ce-82d32e2945fb" width="45%" />
+</div>
+<br/>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3f60296a-1ef4-459e-8836-f4c3d2c8ed16" width="45%" />
+  <img src="https://github.com/user-attachments/assets/d6d5ad95-7842-4c2c-90d7-f9355b89af7f" width="45%" />
+</div>
+<br/>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e473886c-cb20-4de2-8f4c-951df059ed7d" width="45%" />
+</div>
 
 ---
 
@@ -62,35 +65,40 @@ This prototype demonstrates:
 1. Clone the repo:
    ```bash
    git clone https://github.com/your-username/self-care-checklist.git
-2.	Open SelfCareChecklist.xcodeproj in Xcode
-3.	Run on simulator or iOS device (iOS 16+ recommended)
+   
+2. Open `SelfCareChecklist.xcodeproj` in Xcode  
+3. Run on simulator or iOS device (iOS 16+ recommended)
 
 ---
 
-⚠️ What Could Improve (to make it more “production-ready”)
+## ⚠️ What Could Improve (to make it more “production-ready”)
 
-⚠️ File Organization
-	•	All logic is inside ContentView.swift. For scalability:
-	•	Move task-related logic into a separate TaskManager.swift or ViewModel.
-	•	Create a Models/ folder for Task, StreakDay.
-	•	Move timer-related views to a Views/Timers/ folder.
-	•	Use Assets.xcassets for named colors and images consistently.
+### ⚠️ File Organization
 
-⚠️ State Management
-	•	Currently uses @State and @AppStorage directly in the view.
-	•	Consider using ObservableObject + @StateObject for more scalable state management (MVVM pattern).
-	•	This keeps UI logic reactive and testable.
+- All logic is inside `ContentView.swift`. For scalability:  
+  - Move task-related logic into a separate `TaskManager.swift` or ViewModel  
+  - Create a `Models/` folder for `Task`, `StreakDay`  
+  - Move timer-related views to a `Views/Timers/` folder  
+  - Use `Assets.xcassets` for named colors and images consistently  
 
-⚠️ Hardcoded Strings
-	•	Strings like "Drink water" or "Take deep breaths..." are repeated in multiple places.
-	•	Use an enum or constant file to avoid errors and allow localization later.
+### ⚠️ State Management
 
-⚠️ Persistence
-	•	Uses UserDefaults for everything, which is fine for prototyping.
-	•	For scaling, consider using CoreData or AppStorage with shared @ObservableObject.
+- Currently uses `@State` and `@AppStorage` directly in the view  
+- Consider using `ObservableObject` + `@StateObject` for more scalable state management (MVVM pattern)  
+- This keeps UI logic reactive and testable  
+
+### ⚠️ Hardcoded Strings
+
+- Strings like "Drink water" or "Take deep breaths..." are repeated in multiple places  
+- Use an enum or constants file to avoid errors and allow localization later  
+
+### ⚠️ Persistence
+
+- Uses `UserDefaults` for everything, which is fine for prototyping  
+- For scaling, consider using CoreData or `AppStorage` with shared `@ObservableObject`  
 
 ---
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 
-Created by Eissxs – Not Cowboy, Not Guru.
+Created by **Eissxs** – Not Cowboy, Not Guru.
