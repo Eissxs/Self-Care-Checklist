@@ -97,6 +97,12 @@ This prototype demonstrates:
 - Uses `UserDefaults` for everything, which is fine for prototyping  
 - For scaling, consider using CoreData or `AppStorage` with shared `@ObservableObject`  
 
+## Documentation
+
+- [📱 UI Flow Diagram](docs/UI_Flow_Diagram.png) **Not 100% accurate, made using Eraser AI.**
+- [🧱 Architecture Overview](docs/Architecture_Overview.png)
+- [🛠️ Dev Setup Notes](docs/DEV_SETUP.md)
+
 ---
 
 ## 🧑‍💻 Author
