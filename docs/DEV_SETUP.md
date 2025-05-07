@@ -56,12 +56,4 @@ Open `SelfCareChecklist.xcodeproj` using Xcode.
 
 ---
 
-## 📁 Project Structure Overview
-
-<img width="262" alt="Screenshot 2025-05-06 at 9 46 29 PM" src="https://github.com/user-attachments/assets/7575e5d9-ffcf-469b-b61c-9f5ce653417f" />
-
----
-
 If you run into issues, feel free to create an Issue in this repo.
-
-Let me know if you'd like this adapted to include screenshots or diagrams too.
