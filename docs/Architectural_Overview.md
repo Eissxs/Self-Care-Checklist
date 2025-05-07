@@ -1,6 +1,13 @@
-## 🧱 Architectural Overview
+## 🧱 Architectural Overview – SelfCareChecklist
 
-The **SelfCareChecklist** app follows a lightweight **MVVM (Model-View-ViewModel)** architecture combined with **local data persistence** using `UserDefaults`. The architecture is intentionally simple and clean to prioritize clarity, maintainability, and prototyping speed.
+This app follows a simplified SwiftUI-first architecture without MVVM abstraction.  
+All state, logic, and UI are primarily handled directly within the views.
+
+---
+
+### 🧱 Layers Overview
+
+<img width="629" alt="Screenshot 2025-05-07 at 4 15 19 PM" src="https://github.com/user-attachments/assets/fb77f4e5-c97e-422c-acd5-58b4d4481a58" />
 
 ---
 
@@ -33,28 +40,32 @@ Handles saving and restoring state between launches using system frameworks.
 
 ---
 
-### ✅ App Flow Summary
+### 🧩 How It Works
 
-1. **On App Launch**  
-   - Loads tasks and streak data from `UserDefaults`
-   - Checks if a new day has started → if so, resets tasks
-
-2. **User Interaction**  
-   - Tapping a task toggles completion and updates streaks
-   - Some tasks trigger timers (e.g., breathing, walking)
-
-3. **Notification Reminders**  
-   - `UNUserNotificationCenter` triggers a daily reminder (e.g., for "Get Enough Rest")
-
-4. **Data Persistence**  
-   - Task states and streaks are saved using `UserDefaults`
-   - No backend/server is required — fully offline
+- **No ViewModels / Models**: Logic is managed using `@State`, `@AppStorage`, and simple structs inside the views.
+- **Persistence**:  
+  - `UserDefaults` is used via `@AppStorage` for task completion, streak tracking, and reminder times.
+- **Timers**:  
+  - Custom timers are built using SwiftUI `Timer.publish` or `DispatchQueue`, depending on task type.
+- **Notifications**:  
+  - Local notifications are scheduled via `UNUserNotificationCenter` for sleep and daily scan reminders.
+- **UI Transitions**:  
+  - `RootView.swift` handles switching from `SplashScreen` to `ContentView`.
 
 ---
 
-### 🧪 Why MVVM?
+### ✅ Why This Structure?
 
-- **SwiftUI-friendly**: View updates are reactive via `@StateObject` and `@Published`.
-- **Separation of Concerns**: UI logic stays in Views, while data/state is managed in ViewModels.
-- **Testability**: ViewModels can be tested independently of the UI.
-- **Scalability**: This structure can be expanded with additional modules or CoreData in future releases.
+This layout is optimized for fast prototyping and beginner SwiftUI development:
+- Easy to follow
+- Direct state binding
+- Lightweight and no external dependencies
+
+---
+
+### ⚠️ Scaling Note
+
+As the app grows:
+- Refactor views with logic into reusable components
+- Introduce MVVM using `ObservableObject` and `@StateObject` for better separation of concerns
+- Move constants, colors, and notification logic into helper files
