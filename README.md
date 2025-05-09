@@ -1,36 +1,37 @@
-# 🌿 Self-Care Checklist v1.0 (Prototype) for ITEL315 - Elective iOS Development
+# **Self-Care Checklist v1.0 (Prototype)**  
+*ITEL315 – Elective iOS Development*
 
-**Self-Care Checklist** is a simple iOS prototype app built in SwiftUI to encourage consistent wellness habits like walking, drinking water, and practicing mindfulness. It uses daily checklists, streak tracking, local notifications, and timers to help users build self-care routines in a gentle, focused way.
+**Self-Care Checklist** is a lightweight iOS prototype developed in **SwiftUI** to promote consistent wellness habits such as walking, hydration, and mindfulness. It features a daily checklist, streak tracking, local notifications, and built-in timers to help users build healthy routines in a focused and gentle manner.
 
-> ⚠️ This is a **prototype project** – perfect for learning, showcasing SwiftUI features, and exploring wellness-focused app ideas.
-
----
-
-## Features
-
-- ✅ Daily self-care task checklist (e.g., hydration, walking, rest, breathing)
-- 📅 Streak tracking system with automatic reset each day
-- 📊 Bar chart visualizing weekly progress (using Swift Charts)
-- ⏱️ Built-in 20-minute walk timer and 5–10 minute breathing timer
-- 🔔 Local notification for a "Sleep Early" reminder
-- 🧘 Zen-inspired minimalist UI with light green accents
-- 📆 Walk history log (last 7 walk sessions)
-- 💾 State persistence with `UserDefaults` (resets when a new day begins)
+> **Note:** This is a **prototype-level project** designed for learning purposes, showcasing SwiftUI capabilities, and exploring wellness-oriented app concepts.
 
 ---
 
-## 🛠️ Tech Stack
+## **Key Features**
 
-- Swift
-- SwiftUI
-- Swift Charts
-- AVFoundation (for feedback sounds)
-- UserNotifications (for reminders)
-- UserDefaults (for state persistence)
+- **Daily Checklist:** Track wellness activities like hydration, walking, rest, and deep breathing  
+- **Streak Tracking:** Automatically resets daily; visualizes consistency  
+- **Weekly Progress Chart:** Displays user progress using **Swift Charts**  
+- **Timers:** Includes a 20-minute walk timer and a 5–10 minute breathing session timer  
+- **Notifications:** Local reminder for “Sleep Early” task  
+- **UI Design:** Minimalist, Zen-inspired interface with soft green accent tones  
+- **Walk History:** Displays the user’s last 7 walking sessions  
+- **Persistence:** Uses `UserDefaults` to persist state and reset at the start of a new day
 
 ---
 
-## 📸 Screenshots
+## **Tech Stack**
+
+- **Swift**
+- **SwiftUI**
+- **Swift Charts**
+- **AVFoundation** – for feedback audio cues  
+- **UserNotifications** – for local reminders  
+- **UserDefaults** – for lightweight data persistence
+
+---
+
+## **App Screenshots**
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/cbf7b521-8f87-4585-89db-e0b26d88d9bb" width="45%" />
@@ -48,65 +49,68 @@
 
 ---
 
-## 🧪 Project Goals
+## **Project Objectives**
 
-This prototype demonstrates:
+This prototype showcases the following:
 
-- Creating reusable SwiftUI components
-- Persisting and resetting daily task state
-- Managing sheets and timers in SwiftUI
-- Using `@AppStorage` and `UserDefaults` for lightweight data storage
-- Applying clean UI/UX patterns for habit-building apps
+- Development of reusable SwiftUI components  
+- Task state persistence and automatic daily reset  
+- Integration of sheets, timers, and view logic using SwiftUI  
+- Usage of `@AppStorage` and `UserDefaults` for simple state management  
+- Implementation of clean, user-friendly UI/UX for habit-forming experiences
 
 ---
 
-## 📦 Installation
+## **Installation Instructions**
 
-1. Clone the repo:
+1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/self-care-checklist.git
-   
+   ```
+
 2. Open `SelfCareChecklist.xcodeproj` in Xcode  
-3. Run on simulator or iOS device (iOS 16+ recommended)
+3. Run on a simulator or physical iOS device (**iOS 16+ recommended**)
 
 ---
 
-## ⚠️ What Could Improve (to make it more “production-ready”)
+## **Areas for Improvement (Toward Production Readiness)**
 
-### ⚠️ File Organization
+### **1. File Organization**
 
-- All logic is inside `ContentView.swift`. For scalability:  
-  - Move task-related logic into a separate `TaskManager.swift` or ViewModel  
-  - Create a `Models/` folder for `Task`, `StreakDay`  
-  - Move timer-related views to a `Views/Timers/` folder  
-  - Use `Assets.xcassets` for named colors and images consistently  
+- All logic is currently in `ContentView.swift`  
+- **Recommended refactor:**  
+  - Move task logic into `TaskManager.swift` or a dedicated ViewModel  
+  - Create a `Models/` directory for data types like `Task`, `StreakDay`  
+  - Extract timer views into a `Views/Timers/` subfolder  
+  - Use `Assets.xcassets` consistently for color and image management  
 
-### ⚠️ State Management
+### **2. State Management**
 
-- Currently uses `@State` and `@AppStorage` directly in the view  
-- Consider using `ObservableObject` + `@StateObject` for more scalable state management (MVVM pattern)  
-- This keeps UI logic reactive and testable  
+- Uses `@State` and `@AppStorage` directly within views  
+- Consider migrating to `ObservableObject` with `@StateObject` for scalable and modular state control (MVVM architecture)  
+- This improves testability and separation of concerns  
 
-### ⚠️ Hardcoded Strings
+### **3. Hardcoded Strings**
 
-- Strings like "Drink water" or "Take deep breaths..." are repeated in multiple places  
-- Use an enum or constants file to avoid errors and allow localization later  
+- Repetitive use of strings such as “Drink water” and “Take deep breaths”  
+- Use constants or enums to support localization and reduce risk of inconsistency  
 
-### ⚠️ Persistence
+### **4. Data Persistence**
 
-- Uses `UserDefaults` for everything, which is fine for prototyping  
-- For scaling, consider using CoreData or `AppStorage` with shared `@ObservableObject`  
-
----
-
-## Documentation
-
-- [📱 UI Flow Diagram](docs/UI_Flow_Diagram.png) **Not 100% accurate, made using Eraser AI.**
-- [🧱 Architecture Overview](docs/Architecture_Overview.png)
-- [🛠️ Dev Setup Notes](docs/DEV_SETUP.md)
+- Currently relies solely on `UserDefaults`  
+- For more scalable data handling, consider using `CoreData` or shared state management with `@ObservableObject` and `AppStorage`
 
 ---
 
-## 🧑‍💻 Author
+## **Documentation**
 
-Created by **Eissxs** – Not Cowboy, Not Guru.
+- [**UI Flow Diagram**](docs/UI_Flow_Diagram.png) *(Note: Created using Eraser AI; not fully accurate)*  
+- [**Architecture Overview**](docs/Architecture_Overview.png)  
+- [**Developer Setup Guide**](docs/DEV_SETUP.md)
+
+---
+
+## **Author**
+
+Developed by **Eissxs**  
+*“When I wrote this code, only God and I understood what I did. Welp, now only God knows.”*
