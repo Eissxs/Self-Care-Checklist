@@ -1,59 +1,61 @@
-# 🛠️ Developer Setup – SelfCareChecklist
+# Developer Setup – SelfCareChecklist
 
-This guide helps you set up and run the **SelfCareChecklist** SwiftUI prototype on your local machine.
-
----
-
-## ✅ Requirements
-
-- Xcode 15 or later
-- macOS Ventura or later
-- iOS Simulator (iOS 16+ recommended)
-- Apple Developer Account (only needed if building on a real device)
+This guide provides instructions to set up and run the **SelfCareChecklist** SwiftUI prototype locally for development and testing.
 
 ---
 
-## 🚀 Getting Started
+## System Requirements
 
-1. **Clone the repository**
+- Xcode 15 or later  
+- macOS Ventura or later  
+- iOS Simulator (iOS 16 or newer recommended)  
+- Apple Developer Account (required only for deployment to physical devices)
+
+---
+
+## Getting Started
+
+1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/your-username/SelfCareChecklist.git
    cd SelfCareChecklist
+   ```
 
-2. **Open the project in Xcode**
-
+2. Open the Project in Xcode
 Open `SelfCareChecklist.xcodeproj` using Xcode.
 
-3. **Run on Simulator or iOS Device**
-
-- Select an iPhone simulator (e.g., iPhone 16e).
-- Press `Cmd + R` to build and run.
-
----
-
-## ⚠️ Permissions & Setup Notes
-
-- **Notifications Permission**  
-  The app uses `UNUserNotificationCenter` to send local reminders (e.g., for sleep reminders).  
-  Make sure to allow notifications when prompted on first launch.
-
-- **No Backend Required**  
-  This app runs entirely offline using `UserDefaults` for local data persistence.
-
-- **Running on Real Devices**
-  - You may need to configure your Apple Developer Team in:  
-    *Signing & Capabilities → Team*
-  - Enable push notifications (for local notification testing, no server needed)
+3. Run the Application
+- Select an iOS simulator (e.g., iPhone 16e)
+- Press `Cmd + R` to build and launch the app
 
 ---
 
-## 🧪 Debugging Tips
+## Permissions and Setup Notes
 
-- If data isn’t resetting daily, check `DateManager.swift` logic.
-- If notifications don’t show:
-  - Confirm permissions were granted in device **Settings → Notifications**
-  - Use the simulator menu: **Features → Trigger Notification** to test
+### Local Notifications
+The app uses `UNUserNotificationCenter` to send local daily reminders (e.g., for sleep).  
+Ensure you allow notification permissions when prompted on first launch.
+
+### Data Persistence
+All data is stored locally using `UserDefaults`. No backend or internet access is required.
+
+### Deploying to a Physical Device
+- Configure your Apple Developer Team in:  
+  **Signing & Capabilities → Team**
+- Ensure push notifications capability is enabled (used for local notifications only)
 
 ---
 
-If you run into issues, feel free to create an Issue in this repo.
+## Debugging Tips
+
+### Daily Reset Not Working
+Check the logic in `DateManager.swift` to verify date comparison and reset behavior.
+
+### Notifications Not Triggering
+- Verify that notification permissions are enabled in **Settings → Notifications**
+- In the iOS Simulator, use **Features → Trigger Notification** to manually test notifications
+
+---
+
+For additional support or bug reports, please open an Issue in the repository.
