@@ -65,7 +65,7 @@ This prototype showcases the following:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/self-care-checklist.git
+   git clone https://github.com/Eissxs/self-care-checklist.git
    ```
 
 2. Open `SelfCareChecklist.xcodeproj` in Xcode  
