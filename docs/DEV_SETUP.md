@@ -18,7 +18,7 @@ This guide provides instructions to set up and run the **SelfCareChecklist** Swi
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Eissxs/SelfCareChecklist.git
+   git clone https://github.com/Eissxs/Self-Care-Checklist.git
    cd SelfCareChecklist
    ```
 
